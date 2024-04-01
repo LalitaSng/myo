@@ -1,11 +1,14 @@
-import logo from './logo.svg';
+import { RouterProvider } from 'react-router-dom';
+
 import './App.css';
-import DataTable from './homePage';
+import router from './router/index';
+import NavigationBar from './components/NavigationBar';
 
 function App() {
   return (
     <div className="App">
-      <DataTable/>
+      <NavigationBar />
+      <RouterProvider router={router} />
     </div>
   );
 }
