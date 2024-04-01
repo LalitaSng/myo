@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import axios from 'axios';
 import { convertMembersToGridFormat } from './utils/members';
+import Icon from '@mui/material/Icon';
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import SportsGymnasticsRoundedIcon from '@mui/icons-material/SportsGymnasticsRounded';
 
 const columns = [
   { field: 'id', headerName: 'ID', width: 70 },
@@ -46,6 +49,9 @@ export default function DataTable() {
 
   return (
     <div style={{ height: 400, width: '100%' }}>
+        {/* <FitnessCenterIcon /> */}
+        GYM Members
+        <SportsGymnasticsRoundedIcon/>
       <DataGrid
         rows={rows}
         columns={columns}
